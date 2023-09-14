@@ -23,17 +23,33 @@ margin: 0%;
 .cellprop-actions-cont {
     height: 3rem;
     background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
 }
-
+.cell-prop-cont > * {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.cellprop-actions-cont > select {
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+.font-family-prop {
+    padding: 0.2rem;
+}
+.font-size-prop {
+    padding: 0.2rem;
+}
 .formula-actions-cont {
     height: 3rem;
     background-color: lightblue;
 }
-
+.grid-cont {
+    height:  calc(100vh - 3rem -3rem -3rem -3rem );
+}
 .sheet-actions-cont {
     height: 3rem;
     background-color: lightcoral;
-}
-.grid-actions {
-    height:  calc(100vh - 3rem -3rem -3rem -3rem );
 }
