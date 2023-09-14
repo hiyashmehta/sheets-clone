@@ -9,7 +9,15 @@ margin: 0%;
 
 .page-actions-cont {
     height: 3rem;
-    background-color: lightgreen;
+    background-color: #218c74;
+    display:  flex;;
+    align-items: flex-end;
+}
+
+.page-action {
+    margin:  0.5rem;
+    color: #f1f2f6;
+
 }
 
 .cellprop-actions-cont {
