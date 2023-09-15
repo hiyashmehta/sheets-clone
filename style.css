@@ -60,6 +60,7 @@ margin: 0%;
 }
 .address-bar {
     width: 5rem;
+    text-align: center;
 }
 .formula-bar {
     width: calc( 100vw - 5rem - 0.7rem - 00.7rem - 0.7rem );
