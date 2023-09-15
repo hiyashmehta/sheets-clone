@@ -25,6 +25,7 @@ for (let i = 0;i < rows;i++) {
     for (let j = 0;j < cols;j++) {
         let cell = document.createElement("div");
         cell.setAttribute("class", "cell");
+        cell.setAttribute("contenteditable", "true");
         rowCont.appendChild(cell);
     }
     cellsCont.appendChild(rowCont);
