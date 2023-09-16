@@ -66,6 +66,14 @@ underline.addEventListener("click", (e) => {
     cell.style.textDecoration = cellProp.underline ? "underline" : "none";  // ui change (1)
     underline.style.backgroundColor = cellProp.underline ? activeColorProp : inactiveColorProp;  // UI change (2)
 })
+fontSize.addEventListener("change", (e) => {
+    let address = addressBar.value;
+    let [cell, cellProp] = activeCell(address);
+
+    cellProp.fontSize = fontSize.value;  // Data change
+    cell.style.fontSize = cellProp.fontSize + "px";
+    fontSize.value = cellProp.value;
+})
 
 function activeCell(address) {
     let [rid, cid] = decodeRIDCIDFromAddress(address);
