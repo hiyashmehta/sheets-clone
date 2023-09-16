@@ -33,7 +33,6 @@ let leftAlign = alignment[0];
 let centerAlign = alignment[1];
 let rightAlign = alignment[2];
 
-let addressBar = document.querySelector(".address-bar");
 let activeColorProp = "#d1d8e0";
 let inactiveColorProp = "#ecf0f1";
 
@@ -47,7 +46,25 @@ bold.addEventListener("click", (e) => {
     // Modification
     cellProp.bold = !cellProp.bold; // Data change
     cell.style.fontWeight = cellProp.bold ? "bold" : "normal";  // ui change (1)
-    bold.style.backgroundColor = cellProp.bold ? activeColorProp : inactiveColorProp;
+    bold.style.backgroundColor = cellProp.bold ? activeColorProp : inactiveColorProp;  // UI change (2)
+})
+italic.addEventListener("click", (e) => {
+    let address = addressBar.value;
+    let [cell, cellProp] = activeCell(address);
+
+    // Modification
+    cellProp.italic = !cellProp.italic; // Data change
+    cell.style.fontStyle = cellProp.italic ? "italic" : "normal";  // ui change (1)
+    italic.style.backgroundColor = cellProp.italic ? activeColorProp : inactiveColorProp;  // UI change (2)
+})
+underline.addEventListener("click", (e) => {
+    let address = addressBar.value;
+    let [cell, cellProp] = activeCell(address);
+
+    // Modification
+    cellProp.underline = !cellProp.underline; // Data change
+    cell.style.textDecoration = cellProp.underline ? "underline" : "none";  // ui change (1)
+    underline.style.backgroundColor = cellProp.underline ? activeColorProp : inactiveColorProp;  // UI change (2)
 })
 
 function activeCell(address) {
@@ -61,6 +78,6 @@ function activeCell(address) {
 function decodeRIDCIDFromAddress(address) {
     // address -> "A1"
     let rid = Number(address.slice(1)-1); //"1" -> 0
-    let cid = Number(String.charCodeAt(0)) - 65; // "A" -> 65
+    let cid = Number(address.charCodeAt(0)) - 65; // "A" -> 65
     return [rid, cid];
 }
