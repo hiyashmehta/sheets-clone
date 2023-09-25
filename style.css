@@ -1,20 +1,18 @@
-*{
+* {
     box-sizing: border-box;
 }
 body {
-padding:  0;
-margin: 0%;
-
+    padding: 0;
+    margin: 0;
 }
 
 .page-actions-cont {
     height: 3rem;
     background-color: #218c74;
-    display:  flex;;
+    display: flex;
     align-items: flex-end;
     padding-left: 1rem;
 }
-
 .page-action {
     width: 3.5rem;
     height: 2rem;
@@ -35,7 +33,7 @@ margin: 0%;
     align-items: center;
     padding-left: 1rem;
 }
-.cell-prop-cont > * {
+.cellprop-actions-cont > * {
     display: inline-block;
     margin-right: 1rem;
 }
@@ -65,14 +63,14 @@ margin: 0%;
     margin-right: 0.7rem;
 }
 .formula-icon {
-    width: 1.2rem;
+    width: 1.2rem; 
 }
 .address-bar {
     width: 5rem;
     text-align: center;
 }
 .formula-bar {
-    width: calc( 100vw - 5rem - 0.7rem - 00.7rem - 0.7rem );
+    width: calc( 100vw - 5rem - 0.7rem - 0.7rem - 0.7rem );
 }
 .formula-actions-cont > input {
     border: none;
@@ -81,12 +79,12 @@ margin: 0%;
 }
 .sheet-actions-cont {
     height: 3rem;
-    background-color: #ecf0f1;
     display: flex;
     align-items: center;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     gap: 1rem;
+    background-color: #ecf0f1;
 }
 .sheet-actions-cont > * {
     display: inline-block;
@@ -99,11 +97,11 @@ margin: 0%;
 }
 
 .sheets-folder-cont {
-    height: 80%;
-    width: 5rem;
-    width: calc( 100vw - 2rem );
     display: flex;
     align-items: center;
+    height: 80%;
+    width: 5rem;
+    width: calc( 100vw - 2vw );
     overflow: auto;
 }
 .sheet-folder {
@@ -124,7 +122,7 @@ margin: 0%;
 }
 
 .grid-cont {
-    height:  calc( 100vh - 3rem - 3rem - 2rem - 3rem );
+    height: calc( 100vh - 3rem - 3rem - 2rem - 3rem );
     position: relative;
     overflow: scroll;
     background-color: #ecf0f1;
@@ -133,7 +131,7 @@ margin: 0%;
 .top-left-dummy-box {
     height: 2rem;
     width: 2rem;
-    background-color:  #747d8c;
+    background-color: #747d8c;
     position: fixed;
     z-index: 4;
 }
@@ -153,6 +151,7 @@ margin: 0%;
     top: 0;
     left: 2rem;
 }
+
 .address-col {
     height: 2rem;
     width: 2rem;

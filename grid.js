@@ -46,4 +46,3 @@ function addListenerForAddressBarDisplay(cell, i, j) {
         addressBar.value = `${colID}${rowID}`;
     })
 }
-

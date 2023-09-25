@@ -1,10 +1,10 @@
 let downloadBtn = document.querySelector(".download");
 let openBtn = document.querySelector(".open");
 
-// Download task
+// Download Task
 downloadBtn.addEventListener("click", (e) => {
     let jsonData = JSON.stringify([sheetDB, graphComponentMatrix]);
-    let file = new Blob([jsonData], { type: "application/json"});
+    let file = new Blob([jsonData], { type: "application/json" });
 
     let a = document.createElement("a");
     a.href = URL.createObjectURL(file);
@@ -14,7 +14,7 @@ downloadBtn.addEventListener("click", (e) => {
 
 // Open task (upload)
 openBtn.addEventListener("click", (e) => {
-    // Open File explorer
+    // Opens file explorer
     let input = document.createElement("input");
     input.setAttribute("type", "file");
     input.click();
@@ -35,8 +35,8 @@ openBtn.addEventListener("click", (e) => {
             sheetDB = readSheetData[0];
             graphComponentMatrix = readSheetData[1];
 
-            collectedSheetDB[collectedSheetDB.length] = sheetDB;
-            collectedGraphComponent[collectedGraphComponent.length] = graphComponentMatrix;
+            collectedSheetDB[collectedSheetDB.length-1] = sheetDB;
+            collectedGraphComponent[collectedGraphComponent.length-1] = graphComponentMatrix;
 
             handleSheetProperties();
         })
